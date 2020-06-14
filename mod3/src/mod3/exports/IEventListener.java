@@ -1,4 +1,4 @@
-package mod3;
+package mod3.exports;
 
 /**
  * @author Emac

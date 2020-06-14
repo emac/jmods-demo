@@ -1,7 +1,7 @@
 package mod1;
 
 import mod2a.exports.EchoListener;
-import mod3.IEventListener;
+import mod3.exports.IEventListener;
 import mod4.Events;
 
 import java.util.ArrayList;
@@ -27,6 +27,8 @@ public class EventCenter {
 
         System.out.println("Demo: SPI Mode");
         List<IEventListener> listeners2 = ServiceLoader.load(IEventListener.class).stream().map(ServiceLoader.Provider::get).collect(Collectors.toList());
+        // compile error: listeners.add(new InternalEchoListener());
+        // compile error: listeners.add(new SpiEchoListener());
         String event2 = Events.newEvent();
         listeners2.forEach(l -> l.onEvent(event2));
     }

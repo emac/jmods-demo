@@ -1,6 +1,6 @@
 package mod2b;
 
-import mod3.IEventListener;
+import mod3.exports.IEventListener;
 
 /**
  * @author Emac
