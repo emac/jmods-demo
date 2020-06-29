@@ -21,4 +21,4 @@ javac -cp out/mixed/mod2a.jar:out/mixed/mod2b.jar:out/mixed/mod3.jar:out/mixed/m
 jar -cvf out/mixed/mod1.jar -C out/mixed/mod1 .
 
 # run
-java -cp out/mixed/mod1.jar --upgrade-module-path out/mixed/mod2a.jar:out/mixed/mod2b.jar:out/mixed/mod3.jar:out/mixed/mod4.jar mod1.EventCenter
+java -cp out/mixed/mod1.jar -p out/mixed/mod2a.jar:out/mixed/mod2b.jar:out/mixed/mod3.jar:out/mixed/mod4.jar --add-modules mod2a,mod2b,mod3,mod4 mod1.EventCenter
