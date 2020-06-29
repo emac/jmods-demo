@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/zsh
 
 # mod4
 javac -d out/lib/mod4 mod4/src/mod4/**/*.java
